@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        @keyframes sliding {
+            0%{
+                background-color: lightgreen;
+                left: 0;
+            }
+
+            100%{
+                background-color: magenta;
+                left: 400px;
+            }
+            
+        }
+       @keyframes sliding1 {
+            from{
+                background-color: #DAF7A6;
+            }  
+            to{ 
+                background-color: #FFC300;
+            }     
+        }
+        @keyframes sliding2 {
+            from{
+                background-color: #FF5733;
+            }  
+            to{ 
+                background-color: #581845;
+            }     
+        }
+        @keyframes sliding3 {
+            from{
+                background-color:green;
+            }  
+            to{ 
+                background-color: #C70039;
+            }     
+        }
+        @keyframes sliding4 {
+            0%{
+                background-color: yellow;
+                left: 0;
+                top: 0;
+                
+            }
+            25%{
+                top: 225px;
+                background-color: red;
+                transform: scale(.5);
+            }
+            50%{
+                top: 0;
+                background-color: yellow;
+                transform: scale(1);
+            }
+            75%{
+                top: 225px;
+                background-color: red;
+                transform: scale(.5);
+            }
+            100%{
+                background-color: yellow;
+                left: 800px;
+                transform: scale(1);
+            }
+            
+        }
+        .stage1{
+            width: 500px;
+            height: 300px;
+            background-color: lightskyblue;
+            margin: auto;
+        }
+        .ball{
+            margin-top: 3%;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+                              
+        }
+        
+        .bal-1{
+            background-color: rgb(71, 160, 71);
+            margin-left: 15%;
+            animation: sliding1 1s ease-in-out .5s infinite alternate;
+            animation-play-state: running; 
+            
+
+        }
+        .bal-2{
+            background-color: rebeccapurple;
+            animation: sliding2 1s ease-in-out .5s infinite alternate;
+            animation-play-state: running; 
+
+        }
+        .bal-3{
+            background-color: brown;
+            animation: sliding3 .5s ease-in-out 0.5s infinite alternate;
+            animation-play-state: running; 
+
+        }
+        .stage2{
+            width: 500px;
+            height: 300px;
+            background-color: lightskyblue;
+            margin: auto;
+        }
+        .balldown{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: brown;
+            position: relative;
+            animation: sliding 1s ease-in-out .5s infinite alternate;
+            animation-play-state: running; 
+
+        }
+        .stage3{
+            width: 900px;
+            height: 300px;
+            background-color: lightskyblue;
+            margin: auto;
+        }
+        .jumpping{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: brown;
+            position: relative;
+            animation: sliding4 2s ease-in-out 1s infinite alternate;
+            animation-play-state: running;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Lets explore Animation</h1>
+    <div class="stage1">
+        <div class="ball bal-1"></div>
+        <div class="ball bal-2"></div>
+        <div class="ball bal-3"></div>
+    </div>
+    <br><br>
+
+
+    <div class="stage2">
+        <div class="balldown"></div>
+        
+    </div> <br><br>
+
+    <div class="stage3">
+        <div class="jumpping"></div>
+        
+    </div>
+    
+</body>
+</html>
